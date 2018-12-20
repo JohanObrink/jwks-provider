@@ -1,0 +1,25 @@
+{
+  "name": "jwks-provider",
+  "version": "0.0.0",
+  "description": "Serializer of keys for jwks route",
+  "main": "lib/jwks",
+  "scripts": {
+    "test": "jest -c jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JohanObrink/jwks-provider.git"
+  },
+  "keywords": [
+    "jwks",
+    "rsa",
+    "crypto",
+    "signing"
+  ],
+  "author": "Johan Öbrink <johan.obrink@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohanObrink/jwks-provider/issues"
+  },
+  "homepage": "https://github.com/JohanObrink/jwks-provider#readme"
+}
