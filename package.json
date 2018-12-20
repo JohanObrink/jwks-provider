@@ -4,7 +4,12 @@
   "description": "Serializer of keys for jwks route",
   "main": "lib/jwks",
   "scripts": {
-    "test": "jest -c jest.config.js"
+    "lint": "eslint './lib/**/*.js'",
+    "test": "jest",
+    "prepublishOnly": "npm test && npm run lint",
+    "patch-release": "npm version patch && npm publish --access public && git push origin master --follow-tags",
+    "minor-release": "npm version minor && npm publish --access public && git push origin master --follow-tags",
+    "major-release": "npm version major && npm publish --access public && git push origin master --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -21,5 +26,19 @@
   "bugs": {
     "url": "https://github.com/JohanObrink/jwks-provider/issues"
   },
-  "homepage": "https://github.com/JohanObrink/jwks-provider#readme"
+  "homepage": "https://github.com/JohanObrink/jwks-provider#readme",
+  "dependencies": {
+    "node-rsa": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.0.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^23.6.0"
+  }
 }
